@@ -1,0 +1,45 @@
+<div class="principal">
+  <div class="menu" *ngIf="competencias$ | async as competencia">
+    <input class="form-control" type="text" placeholder="Procurar Competência" name="search" [(ngModel)]="filter" />
+    <table class="table" style="overflow: scroll" id="tabela-cadastro">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Competência</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let c of competencia | filter:filter; let i = index">
+          <th scope="row">{{ i +1 }}</th>
+          <td (click)="selectPessoa(this.c)"  >{{ c.competencia_ }}</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+  <div class="historico">
+    <div *ngIf="autorizacoes$ | async as autorizacao">
+      <input class="form-control" type="text" placeholder="Procurar Funcionario" name="search" [(ngModel)]="filter" />
+      <table class="table" style="overflow: scroll" id="tabela-cadastro">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Código</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let c of competencia | filter:filter; let i = index">
+            <th scope="row">{{ autorizacao.id }}</th>
+            <td>
+              <ul>
+                <li>{{ autorizacao.funcionario.nome }}}</li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+  
+    </div>
+  </div>
+
+</div>

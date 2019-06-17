@@ -1,0 +1,63 @@
+<div class="container">
+  <h2 class="text-center" id="title">Cadastro de novo usuário</h2>
+   <p class="text-center">
+      <small id="passwordHelpInline" class="text-muted"> Após a realização do cadastro o Departamento Pessoal 
+          deverá validar o cadastro do servidor.
+          <br>Este processo evita que alguém se passe por você
+      </small>
+    </p>
+  <div class="row">
+    <div class="col-md-5">
+      <form #f="ngForm" (ngSubmit)="onSubmit(f)" >
+        <fieldset>							
+          <p class="text-uppercase pull-center"> Registrar-se</p>	
+            <div class="form-group">
+                <div  padding  *ngIf="f.submitted && cpfCnpjv?.invalid"  class="error-cpf">
+                    CPF Inválido
+                </div>
+              <input type="text" ngModel name="cpf" id="username" class="form-control input-lg" 
+                  placeholder="CPF do Servidor" nccCpfCnpjValidator #cpfCnpjv="ngModel" nccCpfCnpjMask [(ngModel)]="cpf" >
+            </div>
+            
+            <div class="form-group">
+              <input type="text" ngModel name="mae" class="form-control input-lg" placeholder="Nome da Mãe">
+            </div>
+            <div class="form-group">
+                <div  padding  *ngIf="f.submitted && cel.length < 15"  class="error-cpf">
+                    Telefone Inválido ou sem o DDD
+                </div>
+              <input type="text"  [(ngModel)]="cel" name="cel"  (keyup)="maskPhone($event.target.value)"  
+                  class="form-control input-lg" placeholder="Telefone Celular com DDD">
+            </div>
+            <div class="form-group">
+              <input type="password" [(ngModel)]="senha" name="senha"  class="form-control input-lg" placeholder="Senha">
+            </div>
+            <div class="form-group">
+                <div  padding  *ngIf="f.submitted && senha !== senha2"  class="error-cpf">
+                    senhas não conferem
+                </div>
+              <input type="password" [(ngModel)]="senha2" name="senha2"  class="form-control input-lg" placeholder="Repita sua Senha">
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+              <input type="checkbox" (click)="checar = true" class="form-check-input"/>
+                Aceito enviar os dados deste formulário e os derivados de rotinas necessário para a usabilidade deste portal
+              </label>
+            </div>
+          <div>
+            <input type="submit"  class="btn btn-lg btn-primary" id="cadastrar"  value="Cadastrar" >
+          </div>
+        </fieldset>
+      </form>
+  </div>
+      
+  <div class="col-md-2">
+    <!-------null------>
+  </div>
+  
+
+  </div>
+</div>
+<p class="text-center">
+  <small id="passwordHelpInline" class="text-muted"> Exception Soluções Web </small>
+</p>

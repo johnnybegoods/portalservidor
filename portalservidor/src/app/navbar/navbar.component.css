@@ -1,0 +1,90 @@
+.navbar{
+    height: 10%;
+}
+.navbar img{
+    cursor: pointer;
+}
+.navbar a{
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+.navbar li{
+    font-weight: bold;
+}
+.navbar img{
+    margin-left: 35%;
+}
+.dropdown-menu a:hover{
+    color:black;
+    cursor: pointer;
+}
+.navbar-collapse, .dropdown-menu, .navbar{
+    background-color:#4682B4;
+}
+
+.navbar-collapse:hvoer{
+    cursor: pointer;
+}
+.login{
+    width: 100%;
+    float: right;
+    
+}
+
+@media only screen and (max-width: 1024px) {
+    .navbar img{
+        width: 15%;
+        margin-left: 20%;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar img{
+        width: 20%;
+        margin-left: 0%;
+    }
+    .navbar{
+        height: 14%;
+    }
+
+}
+
+@media only screen and (max-width: 824px){
+    .navbar a{
+        font-size: 12pt;
+    }
+}
+
+@media only screen and (max-width: 500px) { 
+    .navbar img{
+        width: 25%;
+    }
+    
+}
+
+@media only screen and (max-width: 425px) { 
+    .navbar{
+        height: 20%;
+    }
+
+    .navbar img{
+        width: 30%;
+    }
+}
+
+@media only screen and (max-width: 375px) { 
+    .navbar{
+        height: 20%;
+    }   
+    .navbar img{
+        width: 35%;
+    }
+}
+
+@media only screen and (max-width: 268px) { 
+    .navbar img{
+        width: 50%;
+    }
+}

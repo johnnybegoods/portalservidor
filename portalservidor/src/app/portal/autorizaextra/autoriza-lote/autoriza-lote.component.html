@@ -1,0 +1,41 @@
+<div class="principal">
+  <div class="tabela ">
+    <tabela-funcionarios></tabela-funcionarios>
+
+  </div>
+  <div class="formulario">
+      <form>
+          <label>Data Ocorrência:</label>
+          <input id="date" type="date"/>
+          <label id="label-just">Justificativa:</label>
+          <textarea name="justificativa"
+                    rows="6" cols="33"></textarea>
+          <label id="label-horas">Horas Autorizadas:</label>
+          <input class="form-control horas" type="text" placeholder="HH:mm"/>
+          <div class="selecao">
+            <input type="radio" name="opcao">Autorizo o Pagamento da Horaa Extra
+                do servidor mediante a justificativa que segue.<br>
+                <br>
+            <input type="radio" name="opcao">Autorizo a inclusão em Banco de Horas
+              do servidor mediante a justificativa que segue.<br>
+          </div>
+          <input class="btn btn-primary" type="submit" value="Enviar"/> 
+          
+        </form>
+        
+
+  </div>
+  <div class="selecionados">
+    <h3>Funcionários Selecionados</h3>
+      <input type="text" class="form-control" readonly="true"
+      value="Funcionario Selecionado"/> <a><img src="../assets/Close-icon.png"></a>
+      <input type="text" class="form-control" readonly="true"
+      value="Funcionario Selecionado"/><a><img src="../assets/Close-icon.png"></a>
+      <input type="text" class="form-control" readonly="true"
+      value="Funcionario Selecionado"/><a><img src="../assets/Close-icon.png"></a>
+      <input type="text" class="form-control" readonly="true"
+      value="Funcionario Selecionado"/><a><img src="../assets/Close-icon.png"></a>
+
+
+  </div>
+</div>

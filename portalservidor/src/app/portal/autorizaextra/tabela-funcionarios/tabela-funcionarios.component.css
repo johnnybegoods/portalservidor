@@ -1,0 +1,35 @@
+
+table{
+    margin-top: 1%;
+}
+
+table tbody,
+table thead {
+  display: block;
+}
+table tbody {
+    overflow: auto;
+    height: 400px;
+}
+table td{
+    width: 100%;
+}
+
+table{
+    border-style: groove;
+    border-color: aliceblue;            
+    
+}
+
+.table tr{
+    cursor: pointer;
+}
+.table tr:hover{
+    background-color: green;
+    color: white;
+    font-weight: bold;
+}
+
+
+
+

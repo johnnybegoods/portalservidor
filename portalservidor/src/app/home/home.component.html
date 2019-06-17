@@ -1,0 +1,50 @@
+<div class="main" >
+        <div class="nav-left">
+            <div class="conteudo-left" >
+                <div class="logo-municipio">
+                    <img src="assets/logo-sertanopolis.jpg">
+                </div>
+                <div class="links">
+                    <ul>
+                        <li><a href="">Link Qualquer</a><img src="https://img.icons8.com/material/24/000000/bookmark.png"></li>
+                        <li><a href="">Link Qualquer</a><img src="https://img.icons8.com/material/24/000000/filled-trash.png"></li>
+                        <li><a href="">Link Qualquer</a><img src="https://img.icons8.com/material/24/000000/download-2.png"></li>
+                        <li><a href="">Link Qualquer</a><img src="https://img.icons8.com/material/24/000000/scroll.png"></li>
+                        <li><a href="">Link Qualquer</a><img src="https://img.icons8.com/material/24/000000/restart.png"></li>
+                        <li><a href="">Link Qualquer</a><img src="https://img.icons8.com/material/24/000000/refresh.png"></li>
+                    </ul>
+
+                </div>
+
+            </div>
+    
+        </div>
+            <div class="principal">
+                    
+                <div class="selecao">
+                    <input (click)="setIndexImage1()" type="radio" name="imagem" value="block" [checked]="display1 == 1"/>
+                    <input (click)="setIndexImage2()" type="radio" name="imagem" value="block" [checked]="display2 == 1" />
+                    <input (click)="setIndexImage3()" type="radio" name="imagem" value="block" [checked]="display3 == 1" />
+                    <input (click)="setIndexImage4()" type="radio" name="imagem" value="block" [checked]="display4 == 1" />
+                </div>
+            
+                <div class="slider">
+                    <img [ngStyle]="{'opacity': display1}"  src="assets/slider/1.jpg" class="display1"> 
+                </div>
+                
+                <div class="slider">
+                    <img [ngStyle]="{'opacity': display2}"  src="assets/slider/2.jpg" class="display2"> 
+                </div>
+                
+                <div class="slider">
+                  <img [ngStyle]="{'opacity': display3}"  src="assets/slider/3.jpg" class="display3"> 
+                </div>
+                
+                <div class="slider">
+                   <img [ngStyle]="{'opacity': display4}"  src="assets/slider/4.jpg" class="display4"> 
+                </div>
+                
+            </div>
+
+</div>
+

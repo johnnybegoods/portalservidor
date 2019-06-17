@@ -1,0 +1,266 @@
+.main{
+    height: 100%;
+    width: 100%;
+}
+.nav-left{
+    width: 20%;
+    float: left;
+    margin-top: 5%;
+    padding: 0% 0.5%; 
+}
+.logo-municipio{
+    overflow: hidden;
+    width: 100%;
+}
+.logo-municipio img{
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 5%;
+}
+.links{
+    background-color: #f5f5f5;
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 10%;
+}
+.links li{
+    list-style: none;
+    background-color: #e6e6fa;
+    margin-top: 2%;
+    font-size: 16pt;
+    text-align: center;
+    border-radius: 5px;
+}
+.links img{
+    float: right;
+}
+
+.links a{
+    text-decoration: none;
+    color: black;
+}
+.links a:hover{
+    font-weight: bold;
+    color: green;
+}
+.conteudo-left{
+    border-style: solid;
+    border-color: grey;
+    border-radius: 7px;
+    width: 100%;
+    padding: 2% 2%;
+}
+.principal{
+    width: 80%;
+    height: 84%;
+   float: left;
+   margin-top: 5%;
+}
+.selecao{
+    background-color: black;
+    width: 100%;
+    height: 4%;
+    display: flex;
+    justify-content: center;
+    padding-top: 0.5%;
+}
+
+.selecao input{
+    position: relative;
+    margin-left: 15%;
+}
+.slider{
+    width: 80%;
+    height: 84%;
+    overflow: hidden;
+    position: absolute;
+}
+.slider img{
+    position: relative;
+    width: 100%;
+}
+
+.display1, .display2, .display3, .display4{
+    transition-property: opacity;
+    transition-duration: 2s;
+}
+input[type='radio']:hover{
+    cursor: pointer;
+}
+input[type='radio']:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #d1d3d1;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}
+
+input[type='radio']:checked:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #ffa500;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}
+
+@media only screen and (max-width: 1320px){
+    .main{
+        margin-top: 0.5%;
+    }
+}
+
+@media only screen and (max-width: 1200px){
+    .main{
+        margin-top: 1%;
+    }
+}
+
+
+@media only screen and (max-width: 1024px){
+    .main{
+        margin-top: 2%;
+    }
+    .selecao{
+        height: 5%;
+    }
+}
+
+@media only screen and (max-width: 882px){
+    .nav-left a{
+        font-size: 12pt;
+    }
+    .main{
+        margin-top: 3%;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .main{
+        margin-top: 5%;
+    }
+    .nav-left{
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+    .conteudo-left{
+        width: 100%;
+        overflow: scroll;
+    }
+    .nav-left img{
+        width: 20%;
+    }
+    .links img{
+        width: 4%;
+    }
+    .logo-municipio img{
+        margin-left: 38%;
+        margin-top: 0%;
+    }
+    .links{
+        padding: 2% 2%;
+        margin-top: 0.5%;
+    }
+    .links li{
+        margin-top: 0.5%;
+    }
+    .principal{
+        width: 100%;
+        margin-top: 0%;
+    }
+    .slider{
+        width: 100%;
+        height: 50%;
+    }
+}
+
+@media only screen and (max-width: 612px){
+    .main{
+        margin-top: 6.5%;
+    }
+    .conteudo-left{
+        height: 100%;
+    }
+    .links{
+        height: 75%;
+    }
+    .nav-left{
+        height: 50%;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .main{
+        margin-top: 9%;
+    }
+    .conteudo-left{
+        height: 100%;
+    }
+    .links{
+        height: 75%;
+    }
+    .nav-left{
+        height: 43%;
+    }
+}
+
+@media only screen and (max-width: 425px){
+    .main{
+        margin-top: 23%;
+    }
+}
+
+@media only screen and (max-width: 389px){
+    .main{
+        margin-top: 25%;
+    }
+    .conteudo-left{
+        height: 100%;
+    }
+    .links{
+        height: 80%;
+    }
+    .nav-left{
+        height: 40%;
+    }
+}
+
+@media only screen and (max-width: 355px){
+    .main{
+        margin-top: 28%;
+    }
+}
+
+@media only screen and (max-width: 324px){
+    .main{
+        margin-top: 32%;
+    }
+    .conteudo-left{
+        height: 100%;
+    }
+    .links{
+        height: 83%;
+    }
+    .nav-left{
+        height: 37%;
+    }
+}
+
+@media only screen and (max-width: 290px){
+    .main{
+        margin-top: 35%;
+    }
+    
+}

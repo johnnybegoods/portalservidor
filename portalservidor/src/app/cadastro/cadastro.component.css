@@ -1,0 +1,35 @@
+.container{
+    margin-top: 8%;
+}
+.error-cpf{
+    color: red;
+}
+@media only screen and (max-width: 768px){
+    .container{
+        margin-top: 15%;
+    }    
+}
+
+@media only screen and (max-width: 514px){
+    .container{
+        margin-top: 20%;
+    }    
+}
+
+@media only screen and (max-width: 425px){
+    .container{
+        margin-top: 30%;
+    }    
+}
+
+@media only screen and (max-width: 355px){
+    .container{
+        margin-top: 40%;
+    }    
+}
+
+@media only screen and (max-width: 273px){
+    .container{
+        margin-top: 50%;
+    }    
+}

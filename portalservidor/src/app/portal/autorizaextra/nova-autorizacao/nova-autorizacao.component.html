@@ -1,0 +1,83 @@
+<!--
+<ngx-spinner
+  bdColor="rgba(51,51,51,0.8)"
+  size="medium"
+  position="absolute"
+  color="#fff"
+  type="ball-scale-multiple">
+ <p style="font-size: 20px; color: white">Loading...</p>
+</ngx-spinner>
+-->
+<div class="principal">
+  <div class="tabela-funcionarios" *ngIf="pessoa$ | async as pessoas; else carregando()">
+   
+    <div class="tabela">
+      <input class="form-control" type="text" placeholder="Procurar Funcionário" name="search" [(ngModel)]="filter" />   
+      <table class="table" style="overflow: scroll" id="tabela-cadastro">
+        <thead>
+          <tr>
+            <th scope="col">Código</th>
+            <th scope="col">Nome</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let p of pessoas | filter:filter; let i = index">
+            <th scope="row">{{ p.id }}</th>
+            <td (click)="selectPessoa(this.p)"  >{{ p.nome }}</td>
+          </tr>
+        </tbody>
+      </table>
+
+      
+
+
+    </div>
+
+    <ngx-spinner *ngIf="showSpinner == true"><p>Loading...</p>
+  </ngx-spinner>
+
+
+  </div>
+  <div class="formulario">
+    <form #f="ngForm" (ngSubmit)="onSubmit()">
+      <input type="text" class="form-control" readonly="true" [(ngModel)]="pnome" #nome="ngModel" name="pnome"
+              placeholder="Selecione um Funcionário na tabela ao lado" required />
+          
+      <label>Data Ocorrência:</label>
+      <input id="date" type="date" [(ngModel)]="docorrencia" required name="docorrencia" />
+      <label id="label-just">Justificativa:</label>
+      <textarea name="justificativa" #justi="ngModel" [(ngModel)]="just" name="just" required
+                rows="6" cols="53" minlength="24" ></textarea>
+      <div *ngIf="justi.invalid && justi.touched" class="alert alert-danger" role="alert" >
+          Nenhuma Justificativa apontada ou texto com menos de 24 caracteres
+
+        </div>
+
+        
+               
+      <label id="label-horas">Horas Autorizadas:</label>
+      <input class="form-control horas" type="time" required #horas="ngModel"
+          [(ngModel)]="hora" name="hora" min="00:01" max="24:00"  />
+          
+          <div *ngIf="horas.invalid && horas.touched" class="alert alert-danger" role="alert" >
+            Nenhum valor para horas geradas
+  
+          </div>
+      <div class="selecao radio-group required" >
+        <input type="radio" name="opcao" (click)="selectRadio('pgto')"  />Autorizo o Pagamento da Hora Extra
+            do servidor mediante a justificativa que segue.<br>
+            <br>
+        <input type="radio" name="opcao" (click)="selectRadio('banco')" />Autorizo a inclusão em Banco de Horas
+          do servidor mediante a justificativa que segue.<br>
+      </div>
+      <input class="btn btn-primary" type="submit" value="Enviar"
+          [disabled]="!f.valid"  />  
+    </form>
+  </div>
+  
+
+ 
+  
+</div>
+
+

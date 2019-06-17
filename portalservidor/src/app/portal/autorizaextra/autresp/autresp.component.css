@@ -1,0 +1,24 @@
+.principal{
+    width: 90%;
+    height: 100%;
+    margin-left: 5%;
+}
+.autorizadas{
+    border-right-style: groove;
+}
+.fila{
+    border-left-style: groove;
+}
+.autorizadas, .fila{
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+.fila h3{
+    margin-left: 2%;
+    color: red;
+}
+.autorizadas h3{
+    margin-left: 2%;
+    color: green;
+}
